@@ -14,13 +14,13 @@ matriz = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
 def tela():
 	os.system('clear')
 	print('    0   1   2')
-	print( '0:  ' + matriz[0][0] + ' | ' + matriz[0][1] + ' | ' + matriz[0][2])
+	print(f'0:  {matriz[0][0]} | {matriz[0][1]} | {matriz[0][2]}')
 	
-	print( '1:  ' + matriz[1][0] + ' | ' + matriz[1][1] + ' | ' + matriz[1][2])
+	print(f'1:  {matriz[1][0]} | {matriz[1][1]} | {matriz[1][2]}')
 	
-	print( '2:  ' + matriz[2][0] + ' | ' + matriz[2][1] + ' | ' + matriz[2][2])
+	print(f'2:  {matriz[2][0]} | {matriz[2][1]} | {matriz[2][2]}')
 	
-	print('Jogadas: ' + Fore.GREEN + str(jogadas) + Fore.RESET)
+	print(f'Jogadas: {Fore.GREEN} {str(jogadas)} {Fore.RESET}')
 
 def jogadorJoga():
 	global quemJoga
@@ -149,15 +149,15 @@ while jogarNovamente == 's':
 					tela()
 					break
 		
-	print(Fore.RED + 'Fim de Jogo' + Fore.RESET)
+	print(f'{Fore.RED}Fim de Jogo{Fore.RESET}')
 	if vencedor == 'X':
-			print(Fore.YELLOW +'Você venceu')
+			print(f'{Fore.YELLOW}Você venceu')
 	elif vencedor == 'O':
-		print('A CPU venceu')
+		print(f'{Fore.YELLOW}A CPU venceu')
 	else:
 		print('Empate!')
 	
-	jogarNovamente = input(Fore.BLUE + 'Jogar novamente? s/n: ' + Fore.RESET).lower().strip()
+	jogarNovamente = input(f'{Fore.BLUE}Jogar novamente? s/n:{Fore.RESET}').lower().strip()
 	if jogarNovamente == 'n':
 		print('Jogo Finalizado')
 	redefinir()		
